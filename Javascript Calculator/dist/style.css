@@ -1,0 +1,91 @@
+body{
+  background-color:#30638E;
+}
+#calculator-body{
+  margin:auto;
+  max-width: 30%;
+  height:400px;
+}
+#disp{
+  font-family: 'Righteous', cursive;
+  font-size:1.4rem;
+  height:80px;
+  background-color:#00798C;
+  color:#ECEBE4;
+  line-height:40px;
+}
+.clickable{
+  height:50px;
+  line-height:50px;
+  background-color:#003D5B;
+  color:#ECEBE4;
+}
+.operation{
+  height:40px;
+  line-height:40px;
+  background-color:#003D5B;
+  color:#EDAE49;
+}
+.col-9{
+  border-right:1px solid #A6A5A0;
+}
+#inner{
+  position:relative;
+  top:50%;
+  transform: perspective(1px) translateY(-50%);
+  border: 1px solid #EDAE49;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width:800px){
+  #calculator-body{
+  max-width: 50%;
+}
+}
+
+@media (max-width:500px){
+  #calculator-body{
+  max-width: 90%;
+}
+}
+.clickable:hover{
+  animation-name:hov;
+  animation-duration:500ms;
+  animation-fill-mode:forwards;
+}
+@keyframes hov{
+  100%{
+    background-color:#003250;
+  }
+}
+
+.operation:hover{
+  animation-name:hov2;
+  animation-duration:500ms;
+  animation-fill-mode:forwards;
+}
+@keyframes hov2{
+  100%{
+    background-color:#002D4B;
+  }
+}
+
+.clickable:active{
+  animation-name:act1;
+  animation-duration:100ms;
+}
+@keyframes act1{
+  100%{
+    background-color:#003D5B;
+  }
+}
+
+.operation:active{
+  animation-name:act2;
+  animation-duration:100ms;
+}
+@keyframes act2{
+  100%{
+    background-color:#003D5B;
+  }
+}
