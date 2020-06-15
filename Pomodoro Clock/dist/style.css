@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Staatliches&display=swap');
+body{
+  background-color:#DBD3AD;
+  font-family: 'Staatliches', cursive;
+  font-size:2vw;
+}
+#outer{
+  height:100vh;
+  max-width:40%;
+  margin:auto;
+}
+#clock{
+  position:relative;
+  top:50%;
+  transform: perspective(1px) translateY(-50%);
+  background-color:#C2714F;
+  border-radius:20px;
+}
+
+#session-length, #break-length{
+  display:inline;
+}
+
+#time-left{
+  height:100px;
+  line-height:100px;
+  font-size:5vw;
+  font-family: 'Dosis', sans-serif;
+  border-top: 1px solid #F6C5AF;
+  border-bottom: 1px solid #F6C5AF;
+  margin-bottom:5px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]{
+  max-width:20%;
+  margin:auto;
+  background-color:#DBD3AD;
+}
+
+audio{
+  display:none;
+}
+
+@media (max-width:800px){
+  body{
+    font-size:3vw;
+  }
+  #outer{
+    max-width:60%;
+  }
+  #time-left{
+    font-size:10vw;
+  }
+  input[type=number]{
+    max-width:40%;
+  }
+}
+
+@media (max-width:480px){
+  body{
+    font-size:8vw;
+  }
+  #outer{
+    max-width:90%;
+  }
+  #time-left{
+    font-size:15vw;
+  }
+  input[type=number]{
+    max-width:100%;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+}
